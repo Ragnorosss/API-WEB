@@ -1,0 +1,79 @@
+.book {
+
+		// .book__filter
+
+		&__filter {
+		}
+
+      &__titel{
+         text-align: center;
+         margin-bottom: 21px;
+      }
+		// .book__container
+
+		&__container {
+         display: flex;
+         justify-content: center;
+         gap: 21px;
+      }
+}
+.fiction {
+   &__titel{
+      text-align: center;
+      margin-bottom: 21px;
+   }
+		
+    
+		// .fiction__inner
+
+		&__inner {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         max-width: 300px;
+         gap: 21px;
+		}
+
+		// .fiction__item
+
+		&__item {
+		}
+}
+.non-fiction {
+
+		// .non-fiction__inner
+      &__titel{
+         text-align: center;
+         margin-bottom: 21px;
+      }
+		&__inner {
+         display: flex;
+         justify-content: center;
+         flex-wrap: wrap;
+         max-width: 300px;
+         gap: 21px;
+      }
+
+		// .non-fiction__item
+
+}
+.cd {
+
+		// .cd__inner
+      &__titel{
+         text-align: center;
+         margin-bottom: 21px;
+      }
+		&__inner {
+         display: flex;
+         justify-content: flex-start;
+         gap: 21px;
+         max-width: 500px;
+         flex-wrap: wrap;
+      }
+
+		// .cd__item
+
+		&__item {
+		}
+}
