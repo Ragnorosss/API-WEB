@@ -59,17 +59,13 @@
 }
 .books {
 
-   // .books__container
-
-   &__container {
-   }
-
    // .books__wrapper
 
    &__wrapper {
-      gap: 32px;
       display: flex;
+      justify-content: space-between;
 }
+
 }
 .info {
 
@@ -109,19 +105,33 @@
       font-size: 12px;
    }
 }
-.rating {
 
-   // .rating__check
+.cds {
+   margin-top: 28px;
+}
+.cd {
+   width: 100%;
+   max-width: 128px;
+   // .cd__wrapper
 
-   &__check {
-      border: none;
-      margin: 5px 0;
+   &__wrapper {
+      display: flex;
+      justify-content: space-between;
    }
 }
-.availability {
 
-   // .availability__check
+.cd-titel {
+   // .cd-titel__name
 
-   &__check {
+   &__name {
+      font-size: 12px;
+   }
+}
+.cd-text {
+
+   // .cd-text__author
+
+   &__author {
+      font-size: 12px;
    }
 }
