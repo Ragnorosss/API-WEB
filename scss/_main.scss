@@ -1,15 +1,10 @@
 .book {
 
-		// .book__filter
-
-		&__filter {
-		}
 
       &__titel{
          text-align: center;
          margin-bottom: 21px;
       }
-		// .book__container
 
 		&__container {
          display: flex;
@@ -23,20 +18,12 @@
       margin-bottom: 21px;
    }
 		
-    
-		// .fiction__inner
-
 		&__inner {
          display: flex;
          flex-wrap: wrap;
          justify-content: center;
          max-width: 300px;
          gap: 21px;
-		}
-
-		// .fiction__item
-
-		&__item {
 		}
 }
 .non-fiction {
@@ -53,9 +40,6 @@
          max-width: 300px;
          gap: 21px;
       }
-
-		// .non-fiction__item
-
 }
 .cd {
 
@@ -69,11 +53,75 @@
          justify-content: flex-start;
          gap: 21px;
          max-width: 500px;
+         margin-bottom: 47px;
          flex-wrap: wrap;
       }
+}
+.books {
 
-		// .cd__item
+   // .books__container
 
-		&__item {
-		}
+   &__container {
+   }
+
+   // .books__wrapper
+
+   &__wrapper {
+      gap: 32px;
+      display: flex;
+}
+}
+.info {
+
+   // .info__book
+
+   &__book {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 17px;
+
+   }
+}
+.book {
+   max-width: 128px;
+}
+.book-img {
+
+   // .book-img__item
+
+   &__item {
+   }
+}
+.book-titel {
+
+   // .book-titel__name
+
+   &__name {
+      font-size: 12px;
+   }
+}
+.book-text {
+
+   // .book-text__author
+
+   &__author {
+      font-size: 12px;
+   }
+}
+.rating {
+
+   // .rating__check
+
+   &__check {
+      border: none;
+      margin: 5px 0;
+   }
+}
+.availability {
+
+   // .availability__check
+
+   &__check {
+   }
 }
