@@ -52,6 +52,7 @@
       padding: 11px 10px;
       border: 1px solid $primerycolor;
       border-radius: 100px;
+      cursor: pointer;
    }
 }
 
@@ -85,12 +86,13 @@
       padding: 12px 0 12px 16px;
    
    }
-   // .search__nav
+   // .search__btn
    &__btn{
       border: none;
       padding: 10px 42px;
       color: #FFFFFF;
       background-color: $primerycolor;
+      cursor: pointer;
    }
 }
 .registration {

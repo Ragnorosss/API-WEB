@@ -81,14 +81,9 @@
 }
 .book {
    max-width: 128px;
+   cursor: pointer;
 }
-.book-img {
 
-   // .book-img__item
-
-   &__item {
-   }
-}
 .book-titel {
 
    // .book-titel__name
@@ -112,6 +107,7 @@
 .cd {
    width: 100%;
    max-width: 128px;
+   cursor: pointer;
    // .cd__wrapper
 
    &__wrapper {

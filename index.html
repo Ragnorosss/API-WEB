@@ -11,550 +11,555 @@
    <link rel="stylesheet" href="css/style.css">
    <title>Work with API</title>
 </head>
-<body>
-   <header class="header">
-      <div class="header__container">
-         <div class="header__wrapper">
-            <a href="#" class="header__logo">Logo</a>
-            <nav class="header__nav">
-               <div class="header__menu">
-                  <h2 class="header-menu__titel">Wish to Search</h2>
-                  <button class="nav__btn button">
-                     <input class="radio__btn" type="radio">
-                     Books</button>
-                  <span>or</span>
-                  <button class="nav__btn button">
-                     <input class="radio__btn" type="radio">
-                     CDs</button>
-                  <span>Only avilabile copies will display</span>
-               </div>
 
-               <div class="registration">
-                  <button class="signin">
-                     Sign In</button>
-                  <button class="favorites">Favorites </button>
-               </div>
-            </nav>
-         </div>
-      </div>
-      <div class="search__wrappe">
-         <input class="search__nav" type="text" placeholder="Search by Book Title / Author / Publisher  / ISBN">
-         <button class="search__btn">Search</button>
-      </div>
-   </header>
-   <main class="main">
-      <section class="book__filter">
-         <h2 class="book__titel">What Intrest you?</h2>
-         <div class="book__container">
-            <div class="fiction__filter">
-               <h2 class="fiction__titel">Fiction Books</h2>
-               <div class="fiction__inner">
-                  <button class="fiction__item button" id="Drama">
-                     Drama
-                  </button>
-                  <button class="fiction__item button" id="Horror">
-                     Horror
-                  </button>
-                  <button class="fiction__item button" id="Mystery">
-                     Mystery
-                  </button>
-                  <button class="fiction__item button" id="Sci-fi">
-                     Sci-fi
-                  </button>
-               </div>
-            </div>
-            <div class="non-fiction__filter">
-               <h2 class="non-fiction__titel">Non - Fiction Books</h2>
-               <div class="non-fiction__inner">
-                  <button class="non-fiction__item button" id="Art">
-                     Art
-                  </button>
-                  <button class="non-fiction__item button" id="Biography">
-                     Biography
-                  </button>
-                  <button class="non-fiction__item button" id="Sports">
-                     Sports
-                  </button>
-                  <button class="non-fiction__item button" id="Travel">
-                     Travel
-                  </button>
-               </div>
-            </div>
-            <div class="cd__filter">
-               <h2 class="cd__titel">CD Genres</h2>
-               <div class="cd__inner">
-                  <button class="cd__item button" id="Blues">
-                     Blues
-                  </button>
-                  <button class="cd__item button" id="Classlist">
-                     Classlist
-                  </button>
-                  <button class="cd__item button" id="Folk">
-                     Folk
-                  </button>
-                  <button class="cd__item button" id="Hip-Hop">
-                     Hip-Hop
-                  </button>
-                  <button class="cd__item button" id="Rap">
-                     Rap
-                  </button>
-                  <button class="cd__item button" id="Reggae">
-                     Reggae
-                  </button>
-                  <button class="cd__item button" id="Rock">
-                     Rock
-                  </button>
-               </div>
+<body>
+   <div class="wrapper">
+      <header class="header">
+         <div class="header__container">
+            <div class="header__wrapper">
+               <a href="#" class="header__logo">Logo</a>
+               <nav class="header__nav">
+                  <div class="header__menu">
+                     <h2 class="header-menu__titel">Wish to Search</h2>
+                     <button class="nav__btn button" id="books__btn">
+                        <input class="radio__btn" type="radio">
+                        Books</button>
+                     <span>or</span>
+                     <button class="nav__btn button" id="cds__btn">
+                        <input class="radio__btn" type="radio">
+                        CDs</button>
+                     <span>Only avilabile copies will display</span>
+                  </div>
+
+                  <div class="registration">
+                     <button class="signin">
+                        Sign In</button>
+                     <button class="favorites">Favorites </button>
+                  </div>
+               </nav>
             </div>
          </div>
-      </section>
-      <section class="books">
-         <div class="books__container">
-            <div class="info__book">
-               <h2>New Releases </h2>
-               <div>Books <span>20</span></div>
-               <div>CDs <span>25</span></div>
+         <div class="search__wrappe">
+            <input class="search__nav" type="text" placeholder="Search by Book Title / Author / Publisher  / ISBN">
+            <input class="search__btn" type="submit">
+         </div>
+      </header>
+      <main class="main">
+         <section class="book__filter">
+            <h2 class="book__titel">What Intrest you?</h2>
+            <div class="book__container">
+               <div class="fiction__filter">
+                  <h2 class="fiction__titel">Fiction Books</h2>
+                  <div class="fiction__inner">
+                     <button class="fiction__item button" id="Drama">
+                        Drama
+                     </button>
+                     <button class="fiction__item button" id="Horror">
+                        Horror
+                     </button>
+                     <button class="fiction__item button" id="Mystery">
+                        Mystery
+                     </button>
+                     <button class="fiction__item button" id="Sci-fi">
+                        Sci-fi
+                     </button>
+                  </div>
+               </div>
+               <div class="non-fiction__filter">
+                  <h2 class="non-fiction__titel">Non - Fiction Books</h2>
+                  <div class="non-fiction__inner">
+                     <button class="non-fiction__item button" id="Art">
+                        Art
+                     </button>
+                     <button class="non-fiction__item button" id="Biography">
+                        Biography
+                     </button>
+                     <button class="non-fiction__item button" id="Sports">
+                        Sports
+                     </button>
+                     <button class="non-fiction__item button" id="Travel">
+                        Travel
+                     </button>
+                  </div>
+               </div>
+               <div class="cd__filter">
+                  <h2 class="cd__titel">CD Genres</h2>
+                  <div class="cd__inner">
+                     <button class="cd__item button" id="Blues">
+                        Blues
+                     </button>
+                     <button class="cd__item button" id="Classlist">
+                        Classlist
+                     </button>
+                     <button class="cd__item button" id="Folk">
+                        Folk
+                     </button>
+                     <button class="cd__item button" id="Hip-Hop">
+                        Hip-Hop
+                     </button>
+                     <button class="cd__item button" id="Rap">
+                        Rap
+                     </button>
+                     <button class="cd__item button" id="Reggae">
+                        Reggae
+                     </button>
+                     <button class="cd__item button" id="Rock">
+                        Rock
+                     </button>
+                  </div>
+               </div>
             </div>
-            <div class="books__wrapper">
-               <div class="book">
-                  <img class="book-img__item" src="./img/image 4.png" alt="">
-                  <h2 class="book-titel__name">The Lost Apothecary-Fiction</h2>
-                  <p class="book-text__author">Sarah Penner</p>
-                  <div class="rating">
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                  </div>
-                  <div class="availability">
-                     <span class="availability__check">Avilible</span>
-                  </div>
+         </section>
+         <section class="books">
+            <div class="books__container">
+               <div class="info__book">
+                  <h2>New Releases </h2>
+                  <div>Books <span class="counetr__books" ></span></div>
+                  <div>CDs <span class=" counter__cds"></span></div>
                </div>
-               <div class="book">
-                  <img class="book-img__item" src="./img/image 5.png" alt="">
-                  <h2 class="book-titel__name">The Lost Apothecary-Fiction</h2>
-                  <p class="book-text__author">Sarah Penner</p>
-                  <div class="rating">
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
+               <div class="books__wrapper">
+                  <div class="book">
+                     <img class="book-img__item" src="./img/image 4.png" alt="">
+                     <h2 class="book-titel__name" data-type="Drama">The Lost Apothecary-Fiction</h2>
+                     <p class="book-text__author">Sarah Penner</p>
+                     <div class="rating">
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                     </div>
+                     <div class="availability">
+                        <span class="availability__check">Avilible</span>
+                     </div>
                   </div>
-                  <div class="availability">
-                     <span class="availability__check">Avilible</span>
+                  <div class="book">
+                     <img class="book-img__item" src="./img/image 5.png" alt="">
+                     <h2 class="book-titel__name" data-type="Drama">The Lost Apothecary-Fiction</h2>
+                     <p class="book-text__author">Sarah Penner</p>
+                     <div class="rating">
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                     </div>
+                     <div class="availability">
+                        <span class="availability__check">Avilible</span>
+                     </div>
                   </div>
-               </div>
-               <div class="book">
-                  <img class="book-img__item" src="./img/image 6.png" alt="">
-                  <h2 class="book-titel__name">Fitness Habits Non-Fiction
+                  <div class="book">
+                     <img class="book-img__item" src="./img/image 6.png" alt="">
+                     <h2 class="book-titel__name" data-type="Art">Fitness Habits Non-Fiction
                      </h2>
-                  <p class="book-text__author">Subhara Moitra</p>
-                  <div class="rating">
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
+                     <p class="book-text__author">Subhara Moitra</p>
+                     <div class="rating">
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                     </div>
+                     <div class="availability">
+                        <span class="availability__check">Avilible</span>
+                     </div>
                   </div>
-                  <div class="availability">
-                     <span class="availability__check">Avilible</span>
+                  <div class="book">
+                     <img class="book-img__item" src="./img/image 7.png" alt="">
+                     <h2 class="book-titel__name" data-type="Biography">Parts Library Fiction</h2>
+                     <p class="book-text__author">Janet Skes CHARLES</p>
+                     <div class="rating">
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                     </div>
+                     <div class="availability">
+                        <span class="availability__check">Avilible</span>
+                     </div>
                   </div>
-               </div>
-               <div class="book">
-                  <img class="book-img__item" src="./img/image 7.png" alt="">
-                  <h2 class="book-titel__name">Parts Library Fiction</h2>
-                  <p class="book-text__author">Janet Skes CHARLES</p>
-                  <div class="rating">
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
+                  <div class="book">
+                     <img class="book-img__item" src="./img/image 12.png" alt="">
+                     <h2 class="book-titel__name " data-type="Sports">Winning Digital Age Fiction</h2>
+                     <p class="book-text__author">Nitin Seth</p>
+                     <div class="rating">
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                     </div>
+                     <div class="availability">
+                        <span class="availability__check">Avilible</span>
+                     </div>
                   </div>
-                  <div class="availability">
-                     <span class="availability__check">Avilible</span>
+                  <div class="book">
+                     <img class="book-img__item" src="./img/image 13.png" alt="">
+                     <h2 class="book-titel__name " data-type="Horror">Black 13 Fiction</h2>
+                     <p class="book-text__author">Adam Hamoy</p>
+                     <div class="rating">
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                     </div>
+                     <div class="availability">
+                        <span class="availability__check">Avilible</span>
+                     </div>
                   </div>
-               </div>
-               <div class="book">
-                  <img class="book-img__item" src="./img/image 12.png" alt="">
-                  <h2 class="book-titel__name">Winning Digital Age Fiction</h2>
-                  <p class="book-text__author">Nitin Seth</p>
-                  <div class="rating">
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
+                  <div class="book">
+                     <img class="book-img__item" src="./img/image 14.png" alt="">
+                     <h2 class="book-titel__name" data-type="Horror">Eating in the age of -Dieting - Non-Fiction</h2>
+                     <p class="book-text__author">SRujuth Diwakar</p>
+                     <div class="rating">
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                     </div>
+                     <div class="availability">
+                        <span class="availability__check">Avilible</span>
+                     </div>
                   </div>
-                  <div class="availability">
-                     <span class="availability__check">Avilible</span>
-                  </div>
-               </div>
-               <div class="book">
-                  <img class="book-img__item" src="./img/image 13.png" alt="">
-                  <h2 class="book-titel__name">Black 13 Fiction</h2>
-                  <p class="book-text__author">Adam Hamoy</p>
-                  <div class="rating">
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                  </div>
-                  <div class="availability">
-                     <span class="availability__check">Avilible</span>
-                  </div>
-               </div>
-               <div class="book">
-                  <img class="book-img__item" src="./img/image 14.png" alt="">
-                  <h2 class="book-titel__name">Eating in the age  of -Dieting  - Non-Fiction</h2>
-                  <p class="book-text__author">SRujuth Diwakar</p>
-                  <div class="rating">
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                  </div>
-                  <div class="availability">
-                     <span class="availability__check">Avilible</span>
-                  </div>
-               </div>
-               <div class="book">
-                  <img class="book-img__item" src="./img/image 15.png" alt="">
-                  <h2 class="book-titel__name">The Lost Apothecary-Fiction</h2>
-                  <p class="book-text__author">Sarah Penner</p>
-                  <div class="rating">
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                  </div>
-                  <div class="availability">
-                     <span class="availability__check">Avilible</span>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <section class="cds">
-         <div class="cds__container">
-            <div class="cd__wrapper">
-               <div class="cd">
-                  <img class="cd-img__item" src="./img/image 16.png" alt="">
-                  <h2 class="cd-titel__name">The Lost Apothecary-Fiction</h2>
-                  <p class="cd-text__author">Sarah Penner</p>
-                  <div class="rating">
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                  </div>
-                  <div class="availability">
-                     <span class="availability__check">Avilible</span>
-                  </div>
-               </div>
-               <div class="cd">
-                  <img class="cd-img__item" src="./img/image 17.png" alt="">
-                  <h2 class="cd-titel__name">The Lost Apothecary-Fiction</h2>
-                  <p class="cd-text__author">Sarah Penner</p>
-                  <div class="rating">
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                  </div>
-                  <div class="availability">
-                     <span class="availability__check">Avilible</span>
-                  </div>
-               </div>
-               <div class="cd">
-                  <img class="cd-img__item" src="./img/image 18.png" alt="">
-                  <h2 class="cd-titel__name">The Lost Apothecary-Fiction</h2>
-                  <p class="cd-text__author">Sarah Penner</p>
-                  <div class="rating">
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                  </div>
-                  <div class="availability">
-                     <span class="availability__check">Avilible</span>
-                  </div>
-               </div>
-               <div class="cd">
-                  <img class="cd-img__item" src="./img/image 19.png" alt="">
-                  <h2 class="cd-titel__name">The Lost Apothecary-Fiction</h2>
-                  <p class="cd-text__author">Sarah Penner</p>
-                  <div class="rating">
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                  </div>
-                  <div class="availability">
-                     <span class="availability__check">Avilible</span>
-                  </div>
-               </div>
-               <div class="cd">
-                  <img class="cd-img__item" src="./img/image 20.png" alt="">
-                  <h2 class="cd-titel__name">The Lost Apothecary-Fiction</h2>
-                  <p class="cd-text__author">Sarah Penner</p>
-                  <div class="rating">
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                  </div>
-                  <div class="availability">
-                     <span class="availability__check">Avilible</span>
-                  </div>
-               </div>
-               <div class="cd">
-                  <img class="cd-img__item" src="./img/image 21.png" alt="">
-                  <h2 class="cd-titel__name">The Lost Apothecary-Fiction</h2>
-                  <p class="cd-text__author">Sarah Penner</p>
-                  <div class="rating">
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                  </div>
-                  <div class="availability">
-                     <span class="availability__check">Avilible</span>
-                  </div>
-               </div>
-               <div class="cd">
-                  <img class="cd-img__item" src="./img/image 22.png" alt="">
-                  <h2 class="cd-titel__name">The Lost Apothecary-Fiction</h2>
-                  <p class="cd-text__author">Sarah Penner</p>
-                  <div class="rating">
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                  </div>
-                  <div class="availability">
-                     <span class="availability__check">Avilible</span>
-                  </div>
-               </div>
-               <div class="cd">
-                  <img class="cd-img__item" src="./img/image 23.png" alt="">
-                  <h2 class="cd-titel__name">The Lost Apothecary-Fiction</h2>
-                  <p class="cd-text__author">Sarah Penner</p>
-                  <div class="rating">
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                     <button class="rating__check">
-                        <img src="./img/icon/Star 5.png" alt="">
-                     </button>
-                  </div>
-                  <div class="availability">
-                     <span class="availability__check">Avilible</span>
+                  <div class="book">
+                     <img class="book-img__item" src="./img/image 15.png" alt="">
+                     <h2 class="book-titel__name" data-type="My">The Reidential Years Non-Fiction</h2>
+                     <p class="book-text__author">Pranav Mukerjee</p>
+                     <div class="rating">
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                     </div>
+                     <div class="availability">
+                        <span class="availability__check">Avilible</span>
+                     </div>
                   </div>
                </div>
             </div>
+         </section>
+         <section class="cds">
+            <div class="cds__container">
+               <div class="cd__wrapper">
+                  <div class="cd">
+                     <img class="cd-img__item" src="./img/image 16.png" alt="">
+                     <h2 class="cd-titel__name " data-type="Blues">The Lost Apothecary-Fiction</h2>
+                     <p class="cd-text__author">Sarah Penner</p>
+                     <div class="rating">
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                     </div>
+                     <div class="availability">
+                        <span class="availability__check">Avilible</span>
+                     </div>
+                  </div>
+                  <div class="cd">
+                     <img class="cd-img__item" src="./img/image 17.png" alt="">
+                     <h2 class="cd-titel__name" data-type="Classlist">Cyrus Says Podcast</h2>
+                     <p class="cd-text__author">Cyrus</p>
+                     <div class="rating">
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                     </div>
+                     <div class="availability">
+                        <span class="availability__check">Avilible</span>
+                     </div>
+                  </div>
+                  <div class="cd">
+                     <img class="cd-img__item" src="./img/image 18.png" alt="">
+                     <h2 class="cd-titel__name" data-type="Folk">The Musafir Stories Album</h2>
+                     <p class="cd-text__author">Ramo</p>
+                     <div class="rating">
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                     </div>
+                     <div class="availability">
+                        <span class="availability__check">Avilible</span>
+                     </div>
+                  </div>
+                  <div class="cd">
+                     <img class="cd-img__item" src="./img/image 19.png" alt="">
+                     <h2 class="cd-titel__name" data-type="Hip-Hop">The Habit Coach Podcast</h2>
+                     <p class="cd-text__author">Ashdin</p>
+                     <div class="rating">
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                     </div>
+                     <div class="availability">
+                        <span class="availability__check">Avilible</span>
+                     </div>
+                  </div>
+                  <div class="cd">
+                     <img class="cd-img__item" src="./img/image 20.png" alt="">
+                     <h2 class="cd-titel__name" data-type="Rap">Paisa Vaisa Podcast Ramesh</h2>
+                     <p class="cd-text__author">Ramesh</p>
+                     <div class="rating">
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                     </div>
+                     <div class="availability">
+                        <span class="availability__check">Avilible</span>
+                     </div>
+                  </div>
+                  <div class="cd">
+                     <img class="cd-img__item" src="./img/image 21.png" alt="">
+                     <h2 class="cd-titel__name" data-type="Reggae">Akbar Birbal Story</h2>
+                     <p class="cd-text__author">Sundar</p>
+                     <div class="rating">
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                     </div>
+                     <div class="availability">
+                        <span class="availability__check">Avilible</span>
+                     </div>
+                  </div>
+                  <div class="cd">
+                     <img class="cd-img__item" src="./img/image 22.png" alt="">
+                     <h2 class="cd-titel__name" data-type="Rock">Rock Ballads Audio</h2>
+                     <p class="cd-text__author">Verious</p>
+                     <div class="rating">
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                     </div>
+                     <div class="availability">
+                        <span class="availability__check">Avilible</span>
+                     </div>
+                  </div>
+                  <div class="cd">
+                     <img class="cd-img__item" src="./img/image 23.png" alt="">
+                     <h2 class="cd-titel__name" data-type="Rock">Rock
+                        Audio
+                     </h2>
+                     <p class="cd-text__author">Judas Perist</p>
+                     <div class="rating">
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                        <button class="rating__check">
+                           <img src="./img/icon/Star 5.png" alt="">
+                        </button>
+                     </div>
+                     <div class="availability">
+                        <span class="availability__check">Avilible</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+      <footer class="footer">
+         <div class="footer__container">
+            <div class="footer__wrapper">
+               <nav class="footer__nav">
+                  <ul class="footer__menu">
+                     <li class="menu__item">
+                        <a class="menu-item__link" href="#">About us</a>
+                     </li>
+                     <li class="menu__item">
+                        <a class="menu-item__link" href="#">Contact Us</a>
+                     </li>
+                  </ul>
+                  <ul class="icons">
+                     <li class="icon__item">
+                        <a class="icon-item__link facebook" href="#"><img src="./img/icon/Facebook.png" alt=""></a>
+                     </li>
+                     <li class="icon__item">
+                        <a class="icon-item__link instagram" href="#"><img src="./img/icon/Instagram.png" alt=""></a>
+                     </li>
+                     <li class="icon__item">
+                        <a class="icon-item__link twitter" href="#"><img src="./img/icon/Twitter.png" alt=""></a>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
          </div>
-      </section>
-   </main>
-   <footer class="footer">
-      <div class="footer__container">
-         <div class="footer__wrapper">
-            <nav class="footer__nav">
-               <ul class="footer__menu">
-                  <li class="menu__item">
-                     <a class="menu-item__link" href="#">About us</a>
-                  </li>
-                  <li class="menu__item">
-                     <a class="menu-item__link" href="#">Contact Us</a>
-                  </li>
-               </ul>
-               <ul class="icons">
-                  <li class="icon__item">
-                     <a class="icon-item__link facebook" href="#"><img src="./img/icon/Facebook.png" alt=""></a>
-                  </li>
-                  <li class="icon__item">
-                     <a class="icon-item__link instagram" href="#"><img src="./img/icon/Instagram.png" alt=""></a>
-                  </li>
-                  <li class="icon__item">
-                     <a class="icon-item__link twitter" href="#"><img src="./img/icon/Twitter.png" alt=""></a>
-                  </li>
-               </ul>
-            </nav>
-         </div>   
-      </div>
-      <p class="copyright">© 1996-2021, Amazon.com, Inc. or its affiliates</p>
-   </footer>
+         <p class="copyright">© 1996 - 2021, Amazon.com, Inc. or its affiliates</p>
+      </footer>
+   </div>
    <script src="js/Aplication.js"></script>
 </body>
 
