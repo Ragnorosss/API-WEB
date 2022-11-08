@@ -57,19 +57,46 @@ booksFilters.addEventListener('click',(e)=>{
    })
 
 })
-
-
-
-
+   const bookTitelArray = [
+   'The Lost Apothecary-Fiction',
+   'Fitness Habits Non-Fiction',
+   'Parts Library Fiction',
+   'Winning Digital Age Fiction',
+   'Black 13 Fiction',
+   'Eating in the age of -Dieting - Non-Fiction',
+   'The Reidential Years Non-Fiction',
+]
+const cdTitelArray = [
+   'Cyrus Says Podcast',
+   'The Musafir Stories Album',
+   'The Habit Coach Podcast',
+   'Paisa Vaisa Podcast Ramesh',
+   'Akbar Birbal Story',
+   'Rock Ballads Audio',
+   'Rock Audio',
+]
    searchBtn.addEventListener('click', () => {
-      checkDataTitel.forEach(el => {
-         console.log(checkTitelbooks.fulltitel)
-         if(el.dataset.type) { 
-            
+      const checBookTiteil = booksGeneral.querySelectorAll(`.book-titel__name`)
+      const checCdsTiteil = cdsGeneral.querySelectorAll(`.cd-titel__name`)
+      checBookTiteil.forEach(el => {
+         for(let i = 0; i < bookTitelArray.length;i ++){
+            if(el.innerHTML !== bookTitelArray[i]) {
+               if(chekSearch.value === bookTitelArray[i])
+               {
+                  el.closest('.book').classList.add('hidden')
+               }
+            }
          }
-      if(chekSearch.value === checkTitelbooks.fulltitel) {
-         el.closest('.book').classList.add('hidden')
-      }
-
    })
+
+   checCdsTiteil.forEach(el => {
+      for(let i = 0; i < cdTitelArray.length;i ++){
+         if(el.innerHTML !== cdTitelArray[i]) {
+            if(chekSearch.value === cdTitelArray[i])
+            {
+               el.closest('.cd').classList.add('hidden')
+            }
+         }
+      }
+})
 })
