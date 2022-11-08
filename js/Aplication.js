@@ -57,6 +57,26 @@ booksFilters.addEventListener('click',(e)=>{
    })
 
 })
+const bookAuthorArray = [
+   'Sarah Penner',
+   'Subhara Moitra',
+   'Janet Skes CHARLES',
+   'Nitin Seth',
+   'Adam Hamoy',
+   'Eating in the age of -Dieting - Non-Fiction',
+   'Rujuth Diwakar',
+]
+
+const cdAuthorArray = [
+   'Jay shetty',
+   'Cyrus',
+   'Ramo',
+   'Ashdin',
+   'Ramesh',
+   'Sundar',
+   'Verious',
+   'Judas Perist',
+]
    const bookTitelArray = [
    'The Lost Apothecary-Fiction',
    'Fitness Habits Non-Fiction',
@@ -76,9 +96,11 @@ const cdTitelArray = [
    'Rock Audio',
 ]
    searchBtn.addEventListener('click', () => {
-      const checBookTiteil = booksGeneral.querySelectorAll(`.book-titel__name`)
-      const checCdsTiteil = cdsGeneral.querySelectorAll(`.cd-titel__name`)
-      checBookTiteil.forEach(el => {
+      const checkBookTiteil = booksGeneral.querySelectorAll(`.book-titel__name`)
+      const checkBookAuthor = booksGeneral.querySelectorAll(`.book-text__author`)
+      const checkCdAuthor = cdsGeneral.querySelectorAll(`.cd-text__author`)
+      const checkCdsTitle = cdsGeneral.querySelectorAll(`.cd-titel__name`)
+      checkBookTiteil.forEach(el => {
          for(let i = 0; i < bookTitelArray.length;i ++){
             if(el.innerHTML !== bookTitelArray[i]) {
                if(chekSearch.value === bookTitelArray[i])
@@ -87,9 +109,20 @@ const cdTitelArray = [
                }
             }
          }
+      })
+
+   checkBookAuthor.forEach(el =>{
+      for(let i = 0; i < bookAuthorArray.length;i ++){
+         if(el.innerHTML !== bookAuthorArray[i]) {
+            if(chekSearch.value === bookAuthorArray[i])
+            {
+               el.closest('.book').classList.add('hidden')
+            }
+         }
+      }
    })
 
-   checCdsTiteil.forEach(el => {
+   checkCdsTitle.forEach(el => {
       for(let i = 0; i < cdTitelArray.length;i ++){
          if(el.innerHTML !== cdTitelArray[i]) {
             if(chekSearch.value === cdTitelArray[i])
@@ -98,5 +131,16 @@ const cdTitelArray = [
             }
          }
       }
-})
+   })
+
+   checkCdAuthor.forEach(el =>{ 
+      for(let i = 0; i < cdAuthorArray.length;i ++){
+         if(el.innerHTML !== cdAuthorArray[i]) {
+            if(chekSearch.value === cdAuthorArray[i])
+            {
+               el.closest('.cd').classList.add('hidden')
+            }
+         }
+      }
+   })
 })
