@@ -160,8 +160,56 @@ const cdTitelArray = [
    'Rock Ballads Audio',
    'Rock Audio',
 ]
+// OBJ book
+const booksValid = {
+   bookAuthorArray: [
+      'Sarah Penner',
+      'Subhara Moitra',
+      'Janet Skes CHARLES',
+      'Nitin Seth',
+      'Adam Hamoy',
+      'Eating in the age of -Dieting - Non-Fiction',
+      'Rujuth Diwakar',
+   ],
 
+    bookTitelArray: [
+      'The Lost Apothecary-Fiction',
+      'Fitness Habits Non-Fiction',
+      'Parts Library Fiction',
+      'Winning Digital Age Fiction',
+      'Black 13 Fiction',
+      'Eating in the age of -Dieting - Non-Fiction',
+      'The Reidential Years Non-Fiction',
+   ]
+   
+}
+// OBJ cd
 
+const cdsValid = {
+   cdAuthorArray: [
+
+   'Jay shetty',
+   'Cyrus',
+   'Ramo',
+   'Ashdin',
+   'Ramesh',
+   'Sundar',
+   'Verious',
+   'Judas Perist',
+
+   ],
+
+    cdTitelArray: [
+      'Cyrus Says Podcast',
+      'The Musafir Stories Album',
+      'The Habit Coach Podcast',
+      'Paisa Vaisa Podcast Ramesh',
+      'Akbar Birbal Story',
+      'Rock Ballads Audio',
+      'Rock Audio',
+   ]
+}
+//
 
 filterBtnBook.addEventListener('click', () => {
 
