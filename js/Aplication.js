@@ -3,6 +3,7 @@ const chekSearch = document.querySelector('.search__nav')
 const searchBtn = document.querySelector('.search__btn')
 const bookCard = document.querySelectorAll('.book')
 const cdCard = document.querySelectorAll('.cd')
+const hidden = document.querySelector('.hidden')
 
 const filterBtnBook = document.querySelector('#books__btn') 
 
@@ -23,34 +24,25 @@ const counterBooksParent = document.querySelector('.info__book')
 counterBooksParent.insertAdjacentHTML('beforeend', `<div>Books:<span>${bookCard.length}</span></div>`)
 counterBooksParent.insertAdjacentHTML('beforeend', `<div>Cds:<span>${cdCard.length}</span></div>`)
 
+function emptyValid(e) {
 
-filterBtnBook.addEventListener('click', () => {
-
-   bookWrapper.classList.toggle('hidden')
-
-})
-filterBtnCds.addEventListener('click', () => {
-
-   cdsWrapper.classList.toggle('hidden')
-
-})
-
-
-booksFilters.addEventListener('click',(e)=>{
    const checkData = booksGeneral.querySelectorAll(`.book-titel__name, [data-type=${e.target.id}]`)
    const checkDataCd = cdsGeneral.querySelectorAll(`.cd-titel__name, [data-type=${e.target.id}]`)
+   
    checkData.forEach(el => {
       if(e.target.id !== el.dataset.type){
 
          el.closest('.book').classList.toggle('hidden')
-         console.log(el.dataset.type)
+      
 
-      }else if (el.dataset.type === e.target.id) {
+      }
+
+      else if (el.dataset.type === e.target.id) {
 
          el.closest('.book').classList.remove('hidden')
 
       } 
-   
+
    })
 
    checkDataCd.forEach(el => {
@@ -59,16 +51,75 @@ booksFilters.addEventListener('click',(e)=>{
          el.closest('.cd').classList.toggle('hidden')
 
       }
+
       else if (el.dataset.type === e.target.id) {
          
 
          el.closest('.cd').classList.remove('hidden')
          
       } 
+      
    
    })
+}
 
+function SearchValue() {
+   const checkBookTiteil = booksGeneral.querySelectorAll(`.book-titel__name`)
+   const checkBookAuthor = booksGeneral.querySelectorAll(`.book-text__author`)
+   const checkCdAuthor = cdsGeneral.querySelectorAll(`.cd-text__author`)
+   const checkCdsTitle = cdsGeneral.querySelectorAll(`.cd-titel__name`)
+   if(chekSearch.value === '' || chekSearch.value === ' ') {
+
+    alert('Placeholder is empty')
+
+   }
+   checkBookTiteil.forEach(el => {
+      for(let i = 0; i < bookTitelArray.length;i ++){
+         if(el.innerHTML !== bookTitelArray[i]) {
+            if(chekSearch.value === bookTitelArray[i])
+            {
+               el.closest('.book').classList.add('hidden')
+            }
+         }
+      }
+   })
+
+checkBookAuthor.forEach(el =>{
+   for(let i = 0; i < bookAuthorArray.length;i ++){
+      if(el.innerHTML !== bookAuthorArray[i]) {
+         console.log(chekSearch.value)
+         if(chekSearch.value === bookAuthorArray[i])
+         {
+            el.closest('.book').classList.add('hidden')
+         }
+        
+         
+      }
+   }
 })
+
+checkCdsTitle.forEach(el => {
+   for(let i = 0; i < cdTitelArray.length;i ++){
+      if(el.innerHTML !== cdTitelArray[i]) {
+         if(chekSearch.value === cdTitelArray[i])
+         {
+            el.closest('.cd').classList.add('hidden')
+         }
+      }
+   }
+})
+
+checkCdAuthor.forEach(el =>{ 
+   for(let i = 0; i < cdAuthorArray.length;i ++){
+      if(el.innerHTML !== cdAuthorArray[i]) {
+         if(chekSearch.value === cdAuthorArray[i])
+         {
+            el.closest('.cd').classList.add('hidden')
+         }
+      }
+   }
+})
+}
 const bookAuthorArray = [
    'Sarah Penner',
    'Subhara Moitra',
@@ -110,62 +161,19 @@ const cdTitelArray = [
    'Rock Audio',
 ]
 
-   searchBtn.addEventListener('click', () => {
-      
-      const checkBookTiteil = booksGeneral.querySelectorAll(`.book-titel__name`)
-      const checkBookAuthor = booksGeneral.querySelectorAll(`.book-text__author`)
-      const checkCdAuthor = cdsGeneral.querySelectorAll(`.cd-text__author`)
-      const checkCdsTitle = cdsGeneral.querySelectorAll(`.cd-titel__name`)
-      if(chekSearch.value === '' || chekSearch.value === ' ') {
 
-       alert('Placeholder is empty')
 
-      }
-      checkBookTiteil.forEach(el => {
-         for(let i = 0; i < bookTitelArray.length;i ++){
-            if(el.innerHTML !== bookTitelArray[i]) {
-               if(chekSearch.value === bookTitelArray[i])
-               {
-                  el.closest('.book').classList.add('hidden')
-               }
-            }
-         }
-      })
+filterBtnBook.addEventListener('click', () => {
 
-   checkBookAuthor.forEach(el =>{
-      for(let i = 0; i < bookAuthorArray.length;i ++){
-         if(el.innerHTML !== bookAuthorArray[i]) {
-            console.log(chekSearch.value)
-            if(chekSearch.value === bookAuthorArray[i])
-            {
-               el.closest('.book').classList.add('hidden')
-            }
-           
-            
-         }
-      }
-   })
+   bookWrapper.classList.toggle('hidden')
 
-   checkCdsTitle.forEach(el => {
-      for(let i = 0; i < cdTitelArray.length;i ++){
-         if(el.innerHTML !== cdTitelArray[i]) {
-            if(chekSearch.value === cdTitelArray[i])
-            {
-               el.closest('.cd').classList.add('hidden')
-            }
-         }
-      }
-   })
-
-   checkCdAuthor.forEach(el =>{ 
-      for(let i = 0; i < cdAuthorArray.length;i ++){
-         if(el.innerHTML !== cdAuthorArray[i]) {
-            if(chekSearch.value === cdAuthorArray[i])
-            {
-               el.closest('.cd').classList.add('hidden')
-            }
-         }
-      }
-   })
 })
 
+filterBtnCds.addEventListener('click', () => {
+
+   cdsWrapper.classList.toggle('hidden')
+
+})
+
+booksFilters.addEventListener('click', emptyValid )
+searchBtn.addEventListener('click', SearchValue ) 
