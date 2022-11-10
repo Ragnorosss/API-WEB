@@ -18,7 +18,11 @@ const finctionFilter = document.querySelector('.fiction__filter')
 const getAllBtnFinction = document.querySelectorAll('.fiction__item')
 const nonFinctionFilter = document.querySelector('.non-fiction__filter')
 const cdsFilter = document.querySelector('.cd__filter')
-const counterBooks = document.querySelector('.counter__books')
+const counterBooksParent = document.querySelector('.info__book')
+
+counterBooksParent.insertAdjacentHTML('beforeend', `<div>Books:<span>${bookCard.length}</span></div>`)
+counterBooksParent.insertAdjacentHTML('beforeend', `<div>Cds:<span>${cdCard.length}</span></div>`)
+
 
 filterBtnBook.addEventListener('click', () => {
 
@@ -112,7 +116,7 @@ const cdTitelArray = [
       const checkCdAuthor = cdsGeneral.querySelectorAll(`.cd-text__author`)
       const checkCdsTitle = cdsGeneral.querySelectorAll(`.cd-titel__name`)
       if(chekSearch.value === '' || chekSearch.value === ' ') {
-         
+
        alert('Placeholder is empty')
 
       }
