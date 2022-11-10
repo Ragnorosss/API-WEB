@@ -21,8 +21,59 @@ const nonFinctionFilter = document.querySelector('.non-fiction__filter')
 const cdsFilter = document.querySelector('.cd__filter')
 const counterBooksParent = document.querySelector('.info__book')
 
+const booksValid = {
+   bookAuthorArray: [
+      'Sarah Penner',
+      'Subhara Moitra',
+      'Janet Skes CHARLES',
+      'Nitin Seth',
+      'Adam Hamoy',
+      'Eating in the age of -Dieting - Non-Fiction',
+      'Rujuth Diwakar',
+   ],
+
+    bookTitelArray: [
+      'The Lost Apothecary-Fiction',
+      'Fitness Habits Non-Fiction',
+      'Parts Library Fiction',
+      'Winning Digital Age Fiction',
+      'Black 13 Fiction',
+      'Eating in the age of -Dieting - Non-Fiction',
+      'The Reidential Years Non-Fiction',
+   ]
+   
+}
+
+const cdsValid = {
+   cdAuthorArray: [
+
+   'Jay shetty',
+   'Cyrus',
+   'Ramo',
+   'Ashdin',
+   'Ramesh',
+   'Sundar',
+   'Verious',
+   'Judas Perist',
+
+   ],
+
+    cdTitelArray: [
+      'Cyrus Says Podcast',
+      'The Musafir Stories Album',
+      'The Habit Coach Podcast',
+      'Paisa Vaisa Podcast Ramesh',
+      'Akbar Birbal Story',
+      'Rock Ballads Audio',
+      'Rock Audio',
+   ]
+}
+
 counterBooksParent.insertAdjacentHTML('beforeend', `<div>Books:<span>${bookCard.length}</span></div>`)
 counterBooksParent.insertAdjacentHTML('beforeend', `<div>Cds:<span>${cdCard.length}</span></div>`)
+
+
+
 
 function emptyValid(e) {
 
@@ -63,7 +114,7 @@ function emptyValid(e) {
    })
 }
 
-function SearchValue() {
+function searchValue() {
    const checkBookTiteil = booksGeneral.querySelectorAll(`.book-titel__name`)
    const checkBookAuthor = booksGeneral.querySelectorAll(`.book-text__author`)
    const checkCdAuthor = cdsGeneral.querySelectorAll(`.cd-text__author`)
@@ -120,6 +171,95 @@ checkCdAuthor.forEach(el =>{
    }
 })
 }
+
+// function searchValueobj() { 
+
+//    const checkBookTiteil = booksGeneral.querySelectorAll(`.book-titel__name`)
+//    const checkBookAuthor = booksGeneral.querySelectorAll(`.book-text__author`)
+//    const checkCdAuthor = cdsGeneral.querySelectorAll(`.cd-text__author`)
+//    const checkCdsTitle = cdsGeneral.querySelectorAll(`.cd-titel__name`)
+
+//    // if(chekSearch.value === '' || chekSearch.value === ' ') {
+
+//    //    alert('Placeholder is empty')
+  
+//    // }
+
+//    checkBookTiteil.forEach(el => {
+//       for(keyTitel in booksValid) { 
+//          for(let i = 0; i < booksValid[keyTitel].length;i++) {
+//             console.log(booksValid[keyTitel][i])
+//             if(el.innerHTML !== booksValid[keyTitel][i]) {
+//                if(chekSearch.value === booksValid[keyTitel][i])
+//                {
+//                   el.closest('.book').classList.add('hidden')
+//                }
+//             }
+//          }
+//       }
+//    })
+//    // checkBookAuthor.forEach(el =>{
+//    //    for(keyAuthor in booksValid){
+//    //       for(let i = 0; i < booksValid[keyAuthor].length;i++){
+//    //          if(el.innerHTML !== booksValid[keyAuthor][i]) {
+//    //             console.log(chekSearch.value)
+//    //             if(chekSearch.value === booksValid[keyAuthor][i])
+//    //             {
+//    //                el.closest('.book').classList.add('hidden')
+//    //             }
+            
+               
+//    //          }
+//    //       }
+//    //    }
+//    // })
+   
+//    // checkCdsTitle.forEach(el => {
+//    //    for(key in cdsValid) { 
+//    //       console.log(cdsValid[key])
+//    //       for(let i = 0; i < cdsValid[key].length;i++) {
+//    //          if(el.innerHTML !== cdsValid[key][i]) {
+//    //             if(chekSearch.value === cdsValid[key][i])
+//    //             {
+//    //                el.closest('.book').classList.add('hidden')
+//    //             }
+//    //          }
+//    //       }
+//    //    }
+//    // })
+   
+//    // checkCdAuthor.forEach(el =>{ 
+//    //    for(key in cdsValid) { 
+//    //       console.log(cdsValid[key])
+//    //       for(let i = 0; i < cdsValid[key].length;i++) {
+//    //          if(el.innerHTML !== cdsValid[key][i]) {
+//    //             if(chekSearch.value === cdsValid[key][i])
+//    //             {
+//    //                el.closest('.book').classList.add('hidden')
+//    //             }
+//    //          }
+//    //       }
+//    //    }
+//    // })
+// }
+
+
+filterBtnBook.addEventListener('click', () => {
+
+   bookWrapper.classList.toggle('hidden')
+
+})
+
+filterBtnCds.addEventListener('click', () => {
+
+   cdsWrapper.classList.toggle('hidden')
+
+})
+
+booksFilters.addEventListener('click', emptyValid )
+searchBtn.addEventListener('click', searchValue ) 
+// searchBtn.addEventListener('click', searchValueobj ) 
+
 const bookAuthorArray = [
    'Sarah Penner',
    'Subhara Moitra',
@@ -160,68 +300,3 @@ const cdTitelArray = [
    'Rock Ballads Audio',
    'Rock Audio',
 ]
-// OBJ book
-const booksValid = {
-   bookAuthorArray: [
-      'Sarah Penner',
-      'Subhara Moitra',
-      'Janet Skes CHARLES',
-      'Nitin Seth',
-      'Adam Hamoy',
-      'Eating in the age of -Dieting - Non-Fiction',
-      'Rujuth Diwakar',
-   ],
-
-    bookTitelArray: [
-      'The Lost Apothecary-Fiction',
-      'Fitness Habits Non-Fiction',
-      'Parts Library Fiction',
-      'Winning Digital Age Fiction',
-      'Black 13 Fiction',
-      'Eating in the age of -Dieting - Non-Fiction',
-      'The Reidential Years Non-Fiction',
-   ]
-   
-}
-// OBJ cd
-
-const cdsValid = {
-   cdAuthorArray: [
-
-   'Jay shetty',
-   'Cyrus',
-   'Ramo',
-   'Ashdin',
-   'Ramesh',
-   'Sundar',
-   'Verious',
-   'Judas Perist',
-
-   ],
-
-    cdTitelArray: [
-      'Cyrus Says Podcast',
-      'The Musafir Stories Album',
-      'The Habit Coach Podcast',
-      'Paisa Vaisa Podcast Ramesh',
-      'Akbar Birbal Story',
-      'Rock Ballads Audio',
-      'Rock Audio',
-   ]
-}
-//
-
-filterBtnBook.addEventListener('click', () => {
-
-   bookWrapper.classList.toggle('hidden')
-
-})
-
-filterBtnCds.addEventListener('click', () => {
-
-   cdsWrapper.classList.toggle('hidden')
-
-})
-
-booksFilters.addEventListener('click', emptyValid )
-searchBtn.addEventListener('click', SearchValue ) 
