@@ -40,9 +40,12 @@ booksFilters.addEventListener('click',(e)=>{
    checkData.forEach(el => {
       if(e.target.id !== el.dataset.type){
 
-         el.closest('.book').classList.add('hidden')
-       
-         
+         el.closest('.book').classList.toggle('hidden')
+
+      }else if (el.dataset.type === e.target.id) {
+
+
+         el.closest('.book').classList.remove('hidden')
       }
    
    })
@@ -50,8 +53,14 @@ booksFilters.addEventListener('click',(e)=>{
    checkDataCd.forEach(el => {
       if(e.target.id !== el.dataset.type){
 
-         el.closest('.cd').classList.add('hidden')
+         el.closest('.cd').classList.toggle('hidden')
 
+      }
+      else if (el.dataset.type === e.target.id) {
+         
+
+         el.closest('.cd').classList.remove('hidden')
+         
       }
    
    })
@@ -77,7 +86,8 @@ const cdAuthorArray = [
    'Verious',
    'Judas Perist',
 ]
-   const bookTitelArray = [
+
+const bookTitelArray = [
    'The Lost Apothecary-Fiction',
    'Fitness Habits Non-Fiction',
    'Parts Library Fiction',
@@ -86,6 +96,7 @@ const cdAuthorArray = [
    'Eating in the age of -Dieting - Non-Fiction',
    'The Reidential Years Non-Fiction',
 ]
+
 const cdTitelArray = [
    'Cyrus Says Podcast',
    'The Musafir Stories Album',
@@ -95,6 +106,7 @@ const cdTitelArray = [
    'Rock Ballads Audio',
    'Rock Audio',
 ]
+
    searchBtn.addEventListener('click', () => {
       const checkBookTiteil = booksGeneral.querySelectorAll(`.book-titel__name`)
       const checkBookAuthor = booksGeneral.querySelectorAll(`.book-text__author`)
