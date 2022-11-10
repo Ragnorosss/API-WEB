@@ -1,4 +1,4 @@
-const body = document.body
+const searchWrapper = document.querySelector('.search__wrappe');
 const chekSearch = document.querySelector('.search__nav')
 const searchBtn = document.querySelector('.search__btn')
 const bookCard = document.querySelectorAll('.book')
@@ -32,8 +32,6 @@ filterBtnCds.addEventListener('click', () => {
 })
 
 
-
-
 booksFilters.addEventListener('click',(e)=>{
    const checkData = booksGeneral.querySelectorAll(`.book-titel__name, [data-type=${e.target.id}]`)
    const checkDataCd = cdsGeneral.querySelectorAll(`.cd-titel__name, [data-type=${e.target.id}]`)
@@ -44,8 +42,8 @@ booksFilters.addEventListener('click',(e)=>{
 
       }else if (el.dataset.type === e.target.id) {
 
-
          el.closest('.book').classList.remove('hidden')
+
       }
    
    })
@@ -108,10 +106,16 @@ const cdTitelArray = [
 ]
 
    searchBtn.addEventListener('click', () => {
+      
       const checkBookTiteil = booksGeneral.querySelectorAll(`.book-titel__name`)
       const checkBookAuthor = booksGeneral.querySelectorAll(`.book-text__author`)
       const checkCdAuthor = cdsGeneral.querySelectorAll(`.cd-text__author`)
       const checkCdsTitle = cdsGeneral.querySelectorAll(`.cd-titel__name`)
+      if(chekSearch.value === '' || chekSearch.value === ' ') {
+         
+       alert('Placeholder is empty')
+
+      }
       checkBookTiteil.forEach(el => {
          for(let i = 0; i < bookTitelArray.length;i ++){
             if(el.innerHTML !== bookTitelArray[i]) {
@@ -126,10 +130,13 @@ const cdTitelArray = [
    checkBookAuthor.forEach(el =>{
       for(let i = 0; i < bookAuthorArray.length;i ++){
          if(el.innerHTML !== bookAuthorArray[i]) {
+            console.log(chekSearch.value)
             if(chekSearch.value === bookAuthorArray[i])
             {
                el.closest('.book').classList.add('hidden')
             }
+           
+            
          }
       }
    })
@@ -156,3 +163,4 @@ const cdTitelArray = [
       }
    })
 })
+
