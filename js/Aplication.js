@@ -43,11 +43,14 @@ booksFilters.addEventListener('click',(e)=>{
       if(e.target.id !== el.dataset.type){
 
          el.closest('.book').classList.toggle('hidden')
+         console.log(el.dataset.type)
 
       }else if (el.dataset.type === e.target.id) {
 
          el.closest('.book').classList.remove('hidden')
 
+      } if (el.dataset.type !== ' ' && el.dataset.type !== e.target.id) { 
+         el.closest('.book').classList.remove('hidden')
       }
    
    })
@@ -63,6 +66,8 @@ booksFilters.addEventListener('click',(e)=>{
 
          el.closest('.cd').classList.remove('hidden')
          
+      } if (el.dataset.type !== ' ' && el.dataset.type !== e.target.id) { 
+         el.closest('.book').classList.remove('hidden')
       }
    
    })
